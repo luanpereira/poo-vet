@@ -1,22 +1,10 @@
-package view;
+package br.uema.pecs.veterinaria.view;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import java.awt.Font;
-import javax.swing.JSeparator;
-import javax.swing.JButton;
-import javax.swing.JTextField;
-import javax.swing.JComboBox;
-import javax.swing.Box;
-import javax.swing.JRadioButton;
-import javax.swing.JTextPane;
+import java.awt.*;
 
-public class Tela3 extends JFrame {
+public class TriagemForm extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField_2;
@@ -25,26 +13,10 @@ public class Tela3 extends JFrame {
 	private JTextField textField;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Tela3 frame = new Tela3();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
-	public Tela3() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	public TriagemForm() {
+//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1024, 838);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -56,7 +28,7 @@ public class Tela3 extends JFrame {
 		lblHospitalVeterinrioUniversitrio.setBounds(22, 11, 664, 61);
 		contentPane.add(lblHospitalVeterinrioUniversitrio);
 		
-		JLabel lblCadastroDeProprietrio = new JLabel("Triagem:");
+		JLabel lblCadastroDeProprietrio = new JLabel("ProprietarioForm:");
 		lblCadastroDeProprietrio.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblCadastroDeProprietrio.setBounds(32, 93, 80, 39);
 		contentPane.add(lblCadastroDeProprietrio);
@@ -145,7 +117,7 @@ public class Tela3 extends JFrame {
 		comboBox_3.setBounds(161, 410, 160, 23);
 		contentPane.add(comboBox_3);
 		
-		JLabel lblTriagem = new JLabel("Triagem");
+		JLabel lblTriagem = new JLabel("ProprietarioForm");
 		lblTriagem.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblTriagem.setBounds(64, 484, 79, 14);
 		contentPane.add(lblTriagem);

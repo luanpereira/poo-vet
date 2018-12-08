@@ -102,3 +102,6 @@ fabric.properties
 # Maven
 log/
 target/
+
+#outros
+.vscode/*
