@@ -1,10 +1,11 @@
-package br.uema.pecs.veterinaria;
+package br.uema.pecs.veterinaria.model;
 
 import sun.util.calendar.Gregorian;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public abstract class Pessoa {
+public abstract class Pessoa implements Serializable {
     protected String nome;
     protected String cpf;
     protected Gregorian dataNascimento;

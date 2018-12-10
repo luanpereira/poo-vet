@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="veterinaria" transaction-type="RESOURCE_LOCAL">
+        <class>br.uema.pecs.veterinaria.model.Proprietario</class>
+        <class>br.uema.pecs.veterinaria.model.Animal</class>
+        <class>br.uema.pecs.veterinaria.model.Consulta</class>
+        <class>br.uema.pecs.veterinaria.model.Pessoa</class>
+        <class>br.uema.pecs.veterinaria.model.Triagem</class>
+        <class>br.uema.pecs.veterinaria.model.Profissional</class>
+
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/veterinaria"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="123456"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.order_updates" value="true"/>
+            <property name="hibernate.autoReconnect" value="true"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

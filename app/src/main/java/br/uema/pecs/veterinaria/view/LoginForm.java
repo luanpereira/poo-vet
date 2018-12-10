@@ -1,12 +1,22 @@
 package br.uema.pecs.veterinaria.view;
 
 import br.uema.pecs.veterinaria.exceptions.UsuarioSenhaInvalidosException;
+import br.uema.pecs.veterinaria.model.Proprietario;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.boot.spi.MetadataImplementor;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.cfg.Environment;
+import org.hibernate.service.ServiceRegistry;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
+import org.hibernate.tool.schema.TargetType;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.EnumSet;
 
 public class LoginForm extends JFrame {
 
@@ -24,11 +34,34 @@ public class LoginForm extends JFrame {
 				try {
 					frame = new LoginForm();
 					frame.setVisible(true);
+
+//					geraBanco();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
+	}
+
+	private static void geraBanco() {
+		ServiceRegistry serviceRegistry;
+		MetadataImplementor metadata;
+
+		serviceRegistry = new StandardServiceRegistryBuilder()
+				.applySetting( Environment.GLOBALLY_QUOTED_IDENTIFIERS, "true" )
+				.applySetting( Environment.DEFAULT_SCHEMA, "public" )
+				.build();
+
+		metadata = (MetadataImplementor) new MetadataSources( serviceRegistry )
+				.addAnnotatedClass( Proprietario.class )
+				.buildMetadata();
+
+		System.out.println( "********* Starting SchemaExport for START-UP *************************" );
+		new SchemaExport().create( EnumSet.of( TargetType.DATABASE, TargetType.STDOUT ), metadata );
+		System.out.println( "********* Completed SchemaExport for START-UP *************************" );
+
+		SchemaExport schemaExport = new SchemaExport();
+		schemaExport.create( EnumSet.of( TargetType.DATABASE, TargetType.STDOUT ), metadata );
 	}
 
 	/**

@@ -1,4 +1,4 @@
-package br.uema.pecs.veterinaria;
+package br.uema.pecs.veterinaria.model;
 
 import br.uema.pecs.veterinaria.enuns.TipoEspecie;
 import br.uema.pecs.veterinaria.enuns.TipoRaca;

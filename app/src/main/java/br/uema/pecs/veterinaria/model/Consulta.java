@@ -1,4 +1,4 @@
-package br.uema.pecs.veterinaria;
+package br.uema.pecs.veterinaria.model;
 
 import sun.util.calendar.Gregorian;
 

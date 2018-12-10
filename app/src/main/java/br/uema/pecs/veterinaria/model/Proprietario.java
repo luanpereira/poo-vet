@@ -1,8 +1,23 @@
-package br.uema.pecs.veterinaria;
+package br.uema.pecs.veterinaria.model;
 
-import java.util.Date;
+import sun.util.calendar.Gregorian;
 
-public class Proprietario extends Pessoa{
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.io.Serializable;
+import java.sql.Date;
+
+@Entity
+public class Proprietario implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nome;
+    private String cpf;
+    private Date dataNascimento;
     private String logradouro;
     private String numero;
     private String bairro;
@@ -15,9 +30,33 @@ public class Proprietario extends Pessoa{
     public Proprietario() {
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public Date getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
     public Proprietario(String nome, String cpf) {
-        super.nome = nome;
-        super.cpf = cpf;
+        this.nome = nome;
+        this.cpf = cpf;
     }
 
     public String getLogradouro() {
