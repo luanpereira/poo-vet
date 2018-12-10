@@ -1,15 +1,15 @@
 package br.uema.pecs.veterinaria.model;
 
-import sun.util.calendar.Gregorian;
+import java.sql.Date;
 
 public class Triagem {
     private double peso;
     private double temperatura;
     private String queixa;
-    private Gregorian dataTriagem;
+    private Date dataTriagem;
     private Animal animal;
 
-    public Triagem(double peso, double temperatura, String queixa, Gregorian dataTriagem, Animal animal) {
+    public Triagem(double peso, double temperatura, String queixa, Date dataTriagem, Animal animal) {
         this.peso = peso;
         this.temperatura = temperatura;
         this.queixa = queixa;
@@ -44,11 +44,11 @@ public class Triagem {
         this.queixa = queixa;
     }
 
-    public Gregorian getDataTriagem() {
+    public Date getDataTriagem() {
         return dataTriagem;
     }
 
-    public void setDataTriagem(Gregorian dataTriagem) {
+    public void setDataTriagem(Date dataTriagem) {
         this.dataTriagem = dataTriagem;
     }
 

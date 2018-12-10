@@ -1,14 +1,12 @@
 package br.uema.pecs.veterinaria.model;
 
-import sun.util.calendar.Gregorian;
-
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 
 public abstract class Pessoa implements Serializable {
     protected String nome;
     protected String cpf;
-    protected Gregorian dataNascimento;
+    protected Date dataNascimento;
 
     public String getNome() {
         return nome;
@@ -26,11 +24,11 @@ public abstract class Pessoa implements Serializable {
         this.cpf = cpf;
     }
 
-    public Gregorian getDataNascimento() {
+    public Date getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Gregorian dataNascimento) {
+    public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 }

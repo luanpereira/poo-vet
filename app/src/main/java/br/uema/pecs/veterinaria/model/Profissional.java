@@ -1,7 +1,5 @@
 package br.uema.pecs.veterinaria.model;
 
-import sun.util.calendar.Gregorian;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

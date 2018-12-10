@@ -17,6 +17,6 @@ services:
     ports:
       - 8080:80
     links: 
-      - db-app
+      - db-app:db
     depends_on: 
       - db-app

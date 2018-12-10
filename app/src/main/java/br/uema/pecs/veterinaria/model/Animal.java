@@ -3,12 +3,13 @@ package br.uema.pecs.veterinaria.model;
 import br.uema.pecs.veterinaria.enuns.TipoEspecie;
 import br.uema.pecs.veterinaria.enuns.TipoRaca;
 import br.uema.pecs.veterinaria.enuns.TipoSexo;
-import sun.util.calendar.Gregorian;
+
+import java.sql.Date;
 
 public class Animal {
     private Proprietario proprietario;
     private String nome;
-    private Gregorian dataNascimento;
+    private Date dataNascimento;
     private TipoSexo sexo;
     private TipoEspecie especie;
     private TipoRaca tipoRaca;
@@ -41,11 +42,11 @@ public class Animal {
         this.nome = nome;
     }
 
-    public Gregorian getDataNascimento() {
+    public Date getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Gregorian dataNascimento) {
+    public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 

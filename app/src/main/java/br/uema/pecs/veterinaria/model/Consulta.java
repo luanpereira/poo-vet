@@ -1,15 +1,15 @@
 package br.uema.pecs.veterinaria.model;
 
-import sun.util.calendar.Gregorian;
+import java.sql.Date;
 
 public class Consulta {
     private String anamnese;
     private String diagnostico;
-    private Gregorian dataConsulta;
+    private Date dataConsulta;
     private Triagem triagem;
     private Profissional profissional;
 
-    public Consulta(String anamnese, String diagnostico, Gregorian dataConsulta, Triagem triagem, Profissional profissional) {
+    public Consulta(String anamnese, String diagnostico, Date dataConsulta, Triagem triagem, Profissional profissional) {
         this.anamnese = anamnese;
         this.diagnostico = diagnostico;
         this.dataConsulta = dataConsulta;
@@ -33,11 +33,11 @@ public class Consulta {
         this.diagnostico = diagnostico;
     }
 
-    public Gregorian getDataConsulta() {
+    public Date getDataConsulta() {
         return dataConsulta;
     }
 
-    public void setDataConsulta(Gregorian dataConsulta) {
+    public void setDataConsulta(Date dataConsulta) {
         this.dataConsulta = dataConsulta;
     }
 
